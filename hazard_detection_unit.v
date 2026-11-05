@@ -9,10 +9,17 @@ module hazard_detection_unit (
     input wire [4:0] if_id_rs,
     input wire [4:0] if_id_rt,
 
+    // Branch decision
+    input wire branch_taken,
+
     // Pipeline control outputs
     output reg pc_write,
     output reg if_id_write,
-    output reg control_mux
+    output reg control_mux,
+
+    // Control hazard outputs
+    output reg flush_if_id,
+    output reg flush_id_ex
 );
 
     // MIPS opcodes
@@ -54,19 +61,28 @@ module hazard_detection_unit (
         endcase
 
         // Default: allow normal pipeline operation.
-        pc_write   = 1'b1;
-        if_id_write = 1'b1;
-        control_mux = 1'b0;
+        pc_write     = 1'b1;
+        if_id_write  = 1'b1;
+        control_mux  = 1'b0;
+
+        flush_if_id  = 1'b0;
+        flush_id_ex  = 1'b0;
+
+        // Detect a control hazard.
+        if (branch_taken) begin
+            flush_if_id = 1'b1;
+            flush_id_ex = 1'b1;
+        end
 
         // Detect a load-use hazard.
-        if (id_ex_memread &&
-            (id_ex_rt != 5'd0) &&
-            ((uses_rs && (id_ex_rt == if_id_rs)) ||
-             (uses_rt && (id_ex_rt == if_id_rt)))) begin
+        else if (id_ex_memread &&
+                 (id_ex_rt != 5'd0) &&
+                 ((uses_rs && (id_ex_rt == if_id_rs)) ||
+                  (uses_rt && (id_ex_rt == if_id_rt)))) begin
 
-            pc_write    = 1'b0;
-            if_id_write = 1'b0;
-            control_mux = 1'b1;
+            pc_write     = 1'b0;
+            if_id_write  = 1'b0;
+            control_mux  = 1'b1;
         end
     end
 
