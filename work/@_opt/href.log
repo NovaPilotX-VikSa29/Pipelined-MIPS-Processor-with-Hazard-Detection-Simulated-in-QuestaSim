@@ -1,0 +1,19 @@
+BEGIN 1:instruction_memory:fast:work
+    memory :  1:tb_mips_pipeline:fast:work
+END 
+BEGIN 1:mips_pipeline:fast:work
+    forward_a :  1:tb_mips_pipeline:fast:work
+    data_hazard_forward :  1:tb_mips_pipeline:fast:work
+    data_hazard_loaduse :  1:tb_mips_pipeline:fast:work
+    struct_hazard :  1:tb_mips_pipeline:fast:work
+    forward_b :  1:tb_mips_pipeline:fast:work
+    ex_pc4 :  1:tb_mips_pipeline:fast:work
+    branch_target_ex :  1:tb_mips_pipeline:fast:work
+    control_hazard :  1:tb_mips_pipeline:fast:work
+END 
+BEGIN 1:data_memory:fast:work
+    memory :  1:tb_mips_pipeline:fast:work
+END 
+BEGIN 1:register_file:fast:work
+    registers :  1:tb_mips_pipeline:fast:work
+END 

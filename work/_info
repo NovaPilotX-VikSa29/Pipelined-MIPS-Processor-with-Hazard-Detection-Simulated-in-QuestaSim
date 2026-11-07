@@ -1,0 +1,355 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/Documents/DLCD Mini Proj
+T_opt
+!i145 1
+!i144 0
+!s110 1794068218
+VZN9kN]X6B54=PezEFd6B:2
+04 16 4 work tb_mips_pipeline fast 0
+=1-345a60e29e8e-6aef4efa-7b-39b4
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U14 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+valu
+Z2 2alu.v|control_unit.v|data_memory.v|instruction_memory.v|program_counter.v|register_file.v|forwarding_unit.v|hazard_detection_unit.v|IF_ID.v|ID_EX.v|EX_MEM.v|MEM_WB.v|mips_pipeline.v|tb_mips_pipeline.v
+Z3 !s110 1794068217
+!i10b 1
+!s100 noz^gAl8HjK56KX?f?mjI1
+I4I`:0fm0W1T@l954a>P950
+R1
+Z4 w1793887081
+8alu.v
+Falu.v
+!i122 0
+L0 2 26
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2025.2;82
+r1
+!s85 0
+31
+Z7 !s108 1794068217.000000
+Z8 !s107 tb_mips_pipeline.v|mips_pipeline.v|MEM_WB.v|EX_MEM.v|ID_EX.v|IF_ID.v|hazard_detection_unit.v|forwarding_unit.v|register_file.v|program_counter.v|instruction_memory.v|data_memory.v|control_unit.v|alu.v|
+Z9 !s90 -reportprogress|300|-work|work|alu.v|control_unit.v|data_memory.v|instruction_memory.v|program_counter.v|register_file.v|forwarding_unit.v|hazard_detection_unit.v|IF_ID.v|ID_EX.v|EX_MEM.v|MEM_WB.v|mips_pipeline.v|tb_mips_pipeline.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0 defaultOptions 1085333592
+vcontrol_unit
+R2
+R3
+!i10b 1
+!s100 bXj@lWH^zdXnF]<cco6KM2
+ISBLDzdTT8UMY?z9hCmB1n2
+R1
+w1793992758
+8control_unit.v
+Fcontrol_unit.v
+!i122 0
+L0 4 71
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vdata_memory
+R2
+R3
+!i10b 1
+!s100 _CAWTjfj?ZMJ<OcC5kAmG1
+I^ASmQ8m^<IFDEKEaYj`BN0
+R1
+Z12 w1793640584
+8data_memory.v
+Fdata_memory.v
+!i122 0
+Z13 L0 2 30
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vEX_MEM
+R2
+R3
+!i10b 1
+!s100 YLo4P7h2i6Z_:6GYd6I<o2
+IgZdI:QIXGL2`hf=;[6Q9d0
+R1
+R12
+8EX_MEM.v
+FEX_MEM.v
+!i122 0
+L0 3 67
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+n@e@x_@m@e@m
+vforwarding_unit
+R2
+R3
+!i10b 1
+!s100 4UfEIJRnaHn`5OZS7V=o_1
+IRoa^IS`zd_z5@`MMhYX:E1
+R1
+R12
+8forwarding_unit.v
+Fforwarding_unit.v
+!i122 0
+L0 2 61
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vhazard_detection_unit
+R2
+R3
+!i10b 1
+!s100 mE3o@?@ed0L7Y=I;<A:mB2
+ITPMV[IaBFU?Dh9[4`=7nW1
+R1
+R4
+8hazard_detection_unit.v
+Fhazard_detection_unit.v
+!i122 0
+L0 2 88
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vID_EX
+R2
+R3
+!i10b 1
+!s100 <7:JWH1FFNf550VEg34Qm0
+IocMbBbZkMeg]jV]NADN_V3
+R1
+R4
+8ID_EX.v
+FID_EX.v
+!i122 0
+L0 3 115
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+n@i@d_@e@x
+vIF_ID
+R2
+R3
+!i10b 1
+!s100 M4QU0N^]zLDbRm>FZJ]f[2
+I:Hla^o>KF_CIllb=Y6SHf3
+R1
+R12
+8IF_ID.v
+FIF_ID.v
+!i122 0
+L0 4 24
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+n@i@f_@i@d
+vinstruction_memory
+R2
+R3
+!i10b 1
+!s100 3FWYP7NfPgXWUH<gc_O<?0
+I@]FP;El;5>C5G?l1J;?Y?3
+R1
+R4
+8instruction_memory.v
+Finstruction_memory.v
+!i122 0
+R13
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vMEM_WB
+R2
+R3
+!i10b 1
+!s100 3E_j>8NWkd=UIgV:>4>CK2
+IGKIZj9[=3]f7mJJIR6TOe3
+R1
+R12
+8MEM_WB.v
+FMEM_WB.v
+!i122 0
+L0 3 41
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+n@m@e@m_@w@b
+vmips_pipeline
+R2
+R3
+!i10b 1
+!s100 Fz:KYYcafzRY5AXVJS^Ho0
+IiSH4Y<hViBRm;N8=]l1cj3
+R1
+w1793992759
+8mips_pipeline.v
+Fmips_pipeline.v
+!i122 0
+L0 14 232
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vprogram_counter
+R2
+R3
+!i10b 1
+!s100 K4KbL7D]lT^0C8g^Q3FXX0
+IR0NH=YM^TchoNJzX4oWlR3
+R1
+R4
+8program_counter.v
+Fprogram_counter.v
+!i122 0
+L0 2 31
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vregister_file
+R2
+R3
+!i10b 1
+!s100 U^A6=XUZO@0hG77NQdOif1
+IQn>6=]E92Xm1gZYWi02Hz2
+R1
+R12
+8register_file.v
+Fregister_file.v
+!i122 0
+L0 2 36
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vtb_mips_pipeline
+R2
+R3
+!i10b 1
+!s100 JTdIYKN]m`76R3MNo;@MP2
+I76Canl=M2jz4mW6>PbKhd2
+R1
+w1793992762
+8tb_mips_pipeline.v
+Ftb_mips_pipeline.v
+!i122 0
+L0 39 133
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11

@@ -1,0 +1,14 @@
+1 15 program_counter 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 36 0
+1 18 instruction_memory 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 131072 0 41 0
+1 5 IF_ID 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 44 0
+1 12 control_unit 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 104 0
+1 13 register_file 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 65 0
+1 5 ID_EX 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 211 0
+1 21 hazard_detection_unit 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 105 0
+1 15 forwarding_unit 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 89 0
+1 3 alu 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 47 0
+1 6 EX_MEM 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 132 0
+1 11 data_memory 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 131072 0 47 0
+1 6 MEM_WB 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 77 0
+1 13 mips_pipeline 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 0 0 411 0
+1 16 tb_mips_pipeline 4 fast 32 D:/Documents/DLCD Mini Proj/work 0 0 180224 0 389 0

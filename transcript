@@ -1,0 +1,117 @@
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do run.do
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:46:57 on Nov 07,2026
+# vlog -reportprogress 300 -work work alu.v control_unit.v data_memory.v instruction_memory.v program_counter.v register_file.v forwarding_unit.v hazard_detection_unit.v IF_ID.v ID_EX.v EX_MEM.v MEM_WB.v mips_pipeline.v tb_mips_pipeline.v 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module alu
+# -- Compiling module control_unit
+# -- Compiling module data_memory
+# -- Compiling module instruction_memory
+# -- Compiling module program_counter
+# -- Compiling module register_file
+# -- Compiling module forwarding_unit
+# -- Compiling module hazard_detection_unit
+# -- Compiling module IF_ID
+# -- Compiling module ID_EX
+# -- Compiling module EX_MEM
+# -- Compiling module MEM_WB
+# -- Compiling module mips_pipeline
+# -- Compiling module tb_mips_pipeline
+# 
+# Top level modules:
+# 	tb_mips_pipeline
+# End time: 21:46:57 on Nov 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.tb_mips_pipeline 
+# Start time: 21:46:57 on Nov 07,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.tb_mips_pipeline(fast)
+# Loading work.mips_pipeline(fast)
+# Loading work.program_counter(fast)
+# Loading work.instruction_memory(fast)
+# Loading work.IF_ID(fast)
+# Loading work.control_unit(fast)
+# Loading work.register_file(fast)
+# Loading work.ID_EX(fast)
+# Loading work.hazard_detection_unit(fast)
+# Loading work.forwarding_unit(fast)
+# Loading work.alu(fast)
+# Loading work.EX_MEM(fast)
+# Loading work.data_memory(fast)
+# Loading work.MEM_WB(fast)
+# [55000 ns] DATA HAZARD    forwarding  A=2 B=2  (2=from EX/MEM, 1=from MEM/WB)
+# [65000 ns] DATA HAZARD    forwarding  A=2 B=1  (2=from EX/MEM, 1=from MEM/WB)
+# [75000 ns] DATA HAZARD    forwarding  A=0 B=2  (2=from EX/MEM, 1=from MEM/WB)
+# [85000 ns] DATA HAZARD    load-use: stall 1 cycle (PC and IF/ID held, bubble to EX)
+# [105000 ns] DATA HAZARD    forwarding  A=1 B=0  (2=from EX/MEM, 1=from MEM/WB)
+# [125000 ns] DATA HAZARD    forwarding  A=2 B=2  (2=from EX/MEM, 1=from MEM/WB)
+# [135000 ns] DATA HAZARD    forwarding  A=2 B=2  (2=from EX/MEM, 1=from MEM/WB)
+# [145000 ns] DATA HAZARD    forwarding  A=2 B=2  (2=from EX/MEM, 1=from MEM/WB)
+# [155000 ns] DATA HAZARD    forwarding  A=2 B=0  (2=from EX/MEM, 1=from MEM/WB)
+# [195000 ns] CONTROL HAZARD branch taken -> target 00000040, flush IF/ID + ID/EX
+# [255000 ns] DATA HAZARD    forwarding  A=2 B=0  (2=from EX/MEM, 1=from MEM/WB)
+# [255000 ns] CONTROL HAZARD branch taken -> target 00000054, flush IF/ID + ID/EX
+# [295000 ns] DATA HAZARD    load-use: stall 1 cycle (PC and IF/ID held, bubble to EX)
+# [315000 ns] DATA HAZARD    forwarding  A=1 B=0  (2=from EX/MEM, 1=from MEM/WB)
+# [315000 ns] CONTROL HAZARD branch taken -> target 00000064, flush IF/ID + ID/EX
+# [355000 ns] CONTROL HAZARD branch taken -> target 00000074, flush IF/ID + ID/EX
+# ---- Results after 80 cycles ----
+# PASS: $1 = 5
+# PASS: $2 = 10
+# PASS: $3 = 15
+# PASS: $4 = 15
+# PASS: $5 = 20
+# PASS: $6 = 0
+# PASS: $7 = 7
+# PASS: $8 = 3
+# PASS: $9 = 6
+# PASS: $10 = 1
+# PASS: $11 = 2
+# PASS: $12 = 7
+# PASS: $13 = 0
+# PASS: $14 = 1
+# PASS: $15 = 0
+# PASS: $16 = 9
+# PASS: $17 = 2
+# PASS: $18 = 15
+# PASS: $19 = 0
+# PASS: $20 = 1
+# PASS: $21 = 0
+# PASS: $0 = 0
+# PASS: dmem[0] = 15
+# PASS: dmem[1] = 20
+# ---- Hazard summary ----
+# PASS: load-use stalls  = 2
+# PASS: taken branches   = 4
+# PASS: forwarding used in 10 cycles
+# PASS: structural conflicts detected 6 times and avoided (separate I/D memory + bypass)
+# *** ALL TESTS PASSED ***
+# ** Note: $stop    : tb_mips_pipeline.v(168)
+#    Time: 822 ns  Iteration: 0  Instance: /tb_mips_pipeline
+# Break in Module tb_mips_pipeline at tb_mips_pipeline.v line 168
+# 0 ps
+# 863100 ps
+# End time: 21:48:01 on Nov 07,2026, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 1
