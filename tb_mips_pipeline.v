@@ -54,29 +54,31 @@ module tb_mips_pipeline;
     // Parking loop (idx 32): its PC+4 is 132. Ignore it when counting.
     wire in_park_loop = (dut.ex_pc4 == 32'd132);
 
-    // ---------------- Hazard detection log + counters ----------------
-    always @(posedge clk) if (!reset) begin
-        cycle <= cycle + 1;
+    always @(posedge clk) if (!reset) cycle <= cycle + 1;
 
+    // ---------------- Hazard detection log + counters ----------------
+    // Sampled at the falling edge (mid-cycle, signals are stable). The time printed is the
+    // START of the clock cycle in which the hazard is active, so it matches the waveform.
+    always @(negedge clk) if (!reset) begin
         if (dut.data_hazard_loaduse) begin
             n_stall <= n_stall + 1;
-            $display("[%0t ns] DATA HAZARD    load-use: stall 1 cycle (PC and IF/ID held, bubble to EX)", $time);
+            $display("[%0d ns] DATA HAZARD    load-use: stall 1 cycle (PC and IF/ID held, bubble to EX)", $time - 5);
         end
         if (dut.data_hazard_forward) begin
             n_fwd <= n_fwd + 1;
-            $display("[%0t ns] DATA HAZARD    forwarding  A=%0d B=%0d  (2=from EX/MEM, 1=from MEM/WB)",
-                     $time, dut.forward_a, dut.forward_b);
+            $display("[%0d ns] DATA HAZARD    forwarding  A=%0d B=%0d  (2=from EX/MEM, 1=from MEM/WB)",
+                     $time - 5, dut.forward_a, dut.forward_b);
         end
         if (dut.control_hazard && !in_park_loop) begin
             n_branch <= n_branch + 1;
-            $display("[%0t ns] CONTROL HAZARD branch taken -> target %h, flush IF/ID + ID/EX",
-                     $time, dut.branch_target_ex);
+            $display("[%0d ns] CONTROL HAZARD branch taken -> target %h, flush IF/ID + ID/EX",
+                     $time - 5, dut.branch_target_ex);
         end
         if (dut.struct_hazard) begin
             n_struct <= n_struct + 1;
 `ifdef VERBOSE_STRUCT
-            $display("[%0t ns] STRUCTURAL     mem=%b regfile=%b (avoided: separate I/D memory, bypass)",
-                     $time, dut.struct_hazard_mem, dut.struct_hazard_rf);
+            $display("[%0d ns] STRUCTURAL     mem=%b regfile=%b (avoided: separate I/D memory, bypass)",
+                     $time - 5, dut.struct_hazard_mem, dut.struct_hazard_rf);
 `endif
         end
     end
